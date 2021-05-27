@@ -1,0 +1,129 @@
+/**
+ * @file Main style sheet for site pages.
+ * @copyright Alexey Ptitsyn <numidium.ru@gmail.com>, 2021.
+ */
+@import "./fonts.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0 0 77px 0;
+
+  background: #efefef;
+  color: #222;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  letter-spacing: .5px;
+
+  font-size: 14px;
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #555;
+
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 44px;
+  }
+
+  &__link {
+    flex: 0 0 auto;
+    padding: 14px;
+
+    text-decoration: none;
+    color: #222;
+
+    &:visited {
+      color: #222;
+    }
+
+    &.active {
+      background: #666;
+      color: #eee;
+    }
+
+    &:hover {
+      background: #888;
+      color: #eee;
+    }
+  }
+}
+
+
+
+
+
+.main {
+  width: 1000px;
+  margin: 16px auto;
+  padding: 16px;
+
+  background: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+
+
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 77px;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  border-top: 1px solid #555;
+  padding: 16px;
+
+  background: #fff;
+  color: #222;
+
+  &__copyright {
+
+  }
+
+  &__text {
+    padding-top: 8px;
+    font-size: 80%;
+    line-height: 1.4em;
+    color: #555;
+  }
+
+  &__left {
+    flex: 1 0 auto;
+  }
+
+  &__right {
+    flex: 0 0 180px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@import "./content-layout.scss";

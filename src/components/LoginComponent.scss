@@ -1,0 +1,50 @@
+/**
+ * @file Login component style sheet.
+ * @copyright Alexey Ptitsyn <numidium.ru@gmail.com>, 2021.
+ */
+.login-component {
+
+  .login-component__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, .2);
+
+    z-index: 200;
+  }
+
+  .login-component__foreground {
+    position: fixed;
+    top: 44px;
+    left: calc(50% - 300px);
+    width: 600px;
+
+    padding: 16px;
+
+    border: 1px solid #555;
+    border-radius: 3px;
+
+    background: #fff;
+
+    z-index: 201;
+
+    .login-component__header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+
+  &__login-row {
+    padding: 16px 0 0 0;
+  }
+
+  &__login-incorrect {
+    text-align: center;
+    color: #f44;
+  }
+}

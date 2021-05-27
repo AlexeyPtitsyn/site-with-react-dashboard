@@ -1,0 +1,10 @@
+node_modules/
+public/*
+!public/.htaccess
+!public/index.php
+!public/tpl
+!public/inc
+!public/backend
+!public/assets
+public/inc/config.php
+package-lock.json

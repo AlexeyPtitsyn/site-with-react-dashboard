@@ -1,0 +1,61 @@
+/**
+ * @file Page editor component style sheet.
+ * @copyright Alexey Ptitsyn <numidium.ru@gmail.com>, 2021.
+ */
+.page-editor {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .page-editor__list-wrapper {
+    display: block;
+    flex: 0 1 20%;
+  }
+
+  .page-editor__logout-area {
+    margin-top: 16px;
+    min-height: 44px;
+
+    background: #fff;
+    border: 1px solid #888;
+    border-radius: 3px;
+
+    &>button {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .page-editor__list {
+    position: relative;
+    min-height: 100px;
+
+    border: 1px solid #888;
+    border-radius: 3px;
+
+    background: #fff;
+
+    .create-page {
+      display: block;
+      padding: 22px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  .page-editor__spacer {
+    flex: 0 0 16px;
+  }
+  .page-editor__editor {
+    flex: 1 0 60%;
+    position: relative;
+    min-height: 200px;
+
+    border: 1px solid #888;
+    border-radius: 3px;
+
+    background: #fff;
+  }
+}

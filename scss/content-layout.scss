@@ -1,0 +1,260 @@
+/**
+ * Content layout.
+ */
+
+%monospace {
+  font-family: "Jet Brains Mono", monospace;
+}
+
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 16px;
+}
+
+a, a:link {
+  color: #55a;
+}
+
+a:visited {
+  color: #a5a;
+}
+
+a:hover {
+  color: #a55;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+
+  border: 1px solid #555;
+  border-radius: 3px;
+
+  margin: 16px;
+  padding: 8px;
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    display: inline-block;
+    padding: 0 8px;
+
+    background: #fff;
+
+    color: #555;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 16px 0 8px;
+  color: #444;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+/**
+ * Quotes
+ */
+blockquote {
+  margin: 8px 0;
+  padding: 0 8px;
+  border-left: 4px solid #ccc;
+}
+
+q {
+
+  &::before {
+    content: '“';
+  }
+
+  &::after {
+    content: '”';
+  }
+
+  &[data-lang="ru"] {
+
+    &::before {
+      content: '„';
+    }
+
+    &::after {
+      content: '“';
+    }
+  }
+}
+
+
+/**
+ * Code blocks
+ */
+pre {
+  @extend %monospace;
+}
+
+code {
+  display: block;
+  margin: 8px 0;
+  padding: 0 8px;
+  
+  background: #eef;
+
+  border-left: 4px solid #88f;
+
+  @extend %monospace;
+}
+
+/**
+ * Code inline
+ */
+kbd {
+  display: inline-block;
+  padding: 0 4px;
+
+  background: #fafafa;
+  border-radius: 3px;
+
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+
+  white-space: nowrap;
+  text-decoration: none;
+  font-style: normal;
+
+  @extend %monospace;
+}
+
+var {
+  display: inline-block;
+  padding: 0 2px;
+
+  white-space: nowrap;
+  text-decoration: none;
+  font-style: normal;
+
+  background: #eef;
+  border-radius: 3px;
+
+  @extend %monospace;
+}
+
+
+mark {
+  background: #ffa;
+  color: #222;
+}
+
+abbr {
+  text-decoration: underline dashed;
+  cursor: help;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.clear-both {
+  display: block;
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+
+s {
+  text-decoration: line-through;
+
+  color: #555;
+}
+
+/**
+ * Lists
+ */
+dl {
+
+  dt {
+    font-weight: 500;
+  }
+
+  dd {
+    margin-left: (16 * 3px);
+  }
+}
+
+
+ul {
+  margin-left: 0;
+  padding-left: 16px * 2;
+
+  list-style-type: square;
+
+  li {
+
+  }
+}
+
+ol {
+  margin-left: 0;
+  padding-left: 16px * 2;
+
+  li {
+
+  }
+}
+
+li::marker {
+  font-weight: 500;
+}
+
+li ul {
+  padding-left: 16px;
+}
+
+li ol {
+  padding-left: 16px;
+}

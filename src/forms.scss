@@ -1,0 +1,76 @@
+/**
+ * Form elements
+ */
+
+%text-field {
+  display: block;
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #888;
+  border-radius: 3px;
+
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+
+  outline: none;
+  appearance: none;
+
+  &:focus {
+    border: 1px solid #555;
+  }
+}
+
+input[type="text"],
+input[type="password"] {
+  @extend %text-field;
+
+  &[readonly] {
+    background: #eee;
+  }
+}
+
+textarea {
+  @extend %text-field;
+
+  font-family: "Jet Brains Mono", monospace;
+  min-height: 3em;
+
+  resize: none;
+}
+
+label {
+  display: block;
+
+  &>div {
+    padding: 20px 0 7px;
+    font-weight: bold;
+  }
+
+  &>span {
+    display: inline-block;
+    padding: 20px 0 7px;
+
+    cursor: pointer;
+  }
+}
+
+button {
+  display: block;
+  padding: 14px;
+
+  border: none;
+  background: transparent;
+
+  color: #44c;
+  font-weight: bold;
+  font-size: 14px;
+
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+
+  &.danger {
+    color: #c44;
+  }
+}

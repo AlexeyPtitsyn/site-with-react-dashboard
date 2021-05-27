@@ -1,0 +1,83 @@
+/**
+ * @file Style-sheet for top-level component.
+ * @copyright Alexey Ptitsyn <numidium.ru@gmail.com>, 2021.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import './fonts.scss';
+
+body {
+  margin: 0;
+
+  padding: 16px;
+
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+
+  background: #efefef;
+}
+
+a, a:link {
+  color: #44c;
+}
+
+a:visited {
+  color: #44c;
+}
+
+a:hover {
+  color: #c44;
+}
+
+@import './forms.scss';
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, .2);
+
+  z-index: 100;
+
+  &::after {
+    width: 200px;
+    height: 44px;
+
+    border: 1px solid #222;
+
+    background: linear-gradient(90deg,
+      #eee 0px,
+      #222 0px,
+      #222 20px,
+      #eee 20px
+      );
+
+    animation: loading-gradient 1.5s linear infinite;
+
+    @keyframes loading-gradient {
+      0% {
+        background-position: 0px 0;
+      }
+      50% {
+        background-position: 178px 0;
+      }
+      100% {
+        background-position: 0px 0;
+      }
+    }
+
+    content: '';
+    z-index: 101;
+  }
+}

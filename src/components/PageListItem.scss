@@ -1,0 +1,40 @@
+/**
+ * @file Page list item component stylesheet.
+ * @copyright Alexey Ptitsyn <numidium.ru@gmail.com>, 2021.
+ */
+.page-list-item {
+  display: flex;
+  min-height: 44px;
+
+  &.is_active {
+    background: #eee;
+  }
+
+  &:hover {
+    background: #ccc;
+  }
+
+  .item__name {
+    flex: 1 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-left: 16px;
+  }
+
+  .item__icon {
+    flex: 0 0 44px;
+  }
+
+  .icon_new_window {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+
+    background: url(../assets/icons/open-new-window.svg);
+    background-size: 40px;
+    background-position: center;
+  }
+}
