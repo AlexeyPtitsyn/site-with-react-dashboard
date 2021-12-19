@@ -7,7 +7,9 @@
 
 require_once "backend.php";
 
-session_start();
+session_start([
+  'cookie_lifetime' => COOKIE_LIFETIME
+]);
 
 if(!Backend::isLoggedIn()) {
   Backend::res([
